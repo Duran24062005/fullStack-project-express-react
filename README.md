@@ -85,28 +85,55 @@ El objetivo es simular un proyecto profesional real que resuelve un problema con
 ```
 stockflow/
 ├── backend/              # Servidor Node.js + Express
-│   ├── config/          # Configuraciones (DB, environment)
-│   ├── controllers/     # Controladores de rutas
-│   ├── middlewares/     # Middlewares (auth, validación, errores)
-│   ├── models/          # Modelos de Mongoose
-│   ├── routes/          # Definición de rutas
-│   ├── services/        # Lógica de negocio
-│   ├── utils/           # Utilidades
-│   ├── validators/      # Validadores de datos
-│   └── server.js        # Punto de entrada del servidor
+│   ├── src/
+│   │   ├── config/      # Configuraciones (DB, environment)
+│   │   ├── controllers/ # Controladores de rutas
+│   │   ├── middlewares/ # Middlewares (auth, validación, errores)
+│   │   ├── models/      # Modelos de Mongoose
+│   │   ├── routes/      # Definición de rutas
+│   │   ├── services/    # Lógica de negocio
+│   │   ├── utils/       # Utilidades
+│   │   └── validators/  # Validadores de datos
+│   ├── index.js         # Punto de entrada del servidor
+│   ├── .env             # Variables de entorno (no incluido en git)
+│   ├── .env.example     # Ejemplo de variables de entorno
+│   ├── package.json     # Dependencias del backend
+│   ├── README.md        # Documentación del backend
+│   └── yarn.lock        # Lock file de Yarn
 │
 ├── frontend/            # Aplicación React
 │   ├── public/          # Archivos estáticos
 │   └── src/
+│       ├── assets/      # Imágenes, iconos, recursos
 │       ├── components/  # Componentes reutilizables
 │       ├── context/     # Context API para estado global
 │       ├── hooks/       # Custom hooks
 │       ├── pages/       # Páginas/vistas principales
 │       ├── services/    # Servicios para comunicación con API
 │       ├── utils/       # Utilidades del frontend
-│       └── App.js       # Componente raíz
+│       ├── app.css      # Estilos globales
+│       ├── app.tsx      # Componente raíz
+│       ├── index.css    # Estilos base
+│       └── main.tsx     # Punto de entrada
+│   ├── index.html       # HTML principal
+│   ├── package.json     # Dependencias del frontend
+│   ├── README.md        # Documentación del frontend
+│   ├── tsconfig.json    # Configuración de TypeScript
+│   ├── vite.config.ts   # Configuración de Vite
+│   └── yarn.lock        # Lock file de Yarn
 │
-└── README.md            # Este archivo
+├── docs/                # Documentación del proyecto
+│   └── helper/          # Documentos auxiliares
+│       ├── IA_prompts.md        # Prompts utilizados con IA
+│       ├── SystemProposal.md    # Propuesta inicial del sistema
+│       ├── Architecture.md      # Documentación de arquitectura
+│       └── SystemArtifacts.md   # Artefactos del sistema
+│
+├── node_modules/        # Dependencias (generado automáticamente)
+├── .gitignore           # Archivos ignorados por Git
+├── package.json         # Configuración raíz del monorepo
+├── README.md            # Este archivo (documentación principal)
+└── yarn.lock            # Lock file de Yarn (raíz)
 ```
 
 ## 🛠️ Instalación
