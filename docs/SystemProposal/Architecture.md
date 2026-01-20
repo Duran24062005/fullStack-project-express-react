@@ -1,9 +1,3 @@
-Perfecto. Ahora voy a crear el **diseño arquitectónico completo del sistema StockFlow**.
-
-He creado un diagrama de la arquitectura general. Ahora te presento el diseño completo:
-
----
-
 # DISEÑO ARQUITECTÓNICO COMPLETO - StockFlow
 
 ## 1. ARQUITECTURA GENERAL

@@ -1,108 +1,302 @@
-# Fullstack Project – Express + React + MongoDB
+<div align="center">
+  <h1>Fullstack Project – Express + React + MongoDB</h1>
+  <p>Arquitectura de software escalable y mantenible</p>
+</div>
 
-## Descripción
+# StockFlow - Sistema de Gestión de Inventario Inteligente
 
-Este repositorio contiene un proyecto **full stack** desarrollado con tecnologías modernas del ecosistema JavaScript.  
-El proyecto está organizado en dos aplicaciones independientes (backend y frontend) dentro de un mismo repositorio, con el objetivo de simular un entorno real de desarrollo profesional.
+## 📋 Descripción
 
-El sistema que se desarrollará tendrá como base un **CRUD completo**, extendido con buenas prácticas de arquitectura, diseño y escalabilidad.
+StockFlow es un sistema completo de gestión de inventario diseñado para pequeños negocios (tiendas, almacenes, mini-mercados). Permite controlar el stock de productos en tiempo real, registrar movimientos de inventario, generar alertas de reabastecimiento y obtener métricas clave del negocio.
 
----
+## 🎯 Objetivo del Proyecto
 
-## Objetivo del proyecto
+Este proyecto es desarrollado con fines de práctica y aprendizaje de desarrollo full stack profesional, aplicando:
 
-El objetivo principal de este proyecto es **practicar y consolidar conocimientos en desarrollo de software full stack**, aplicando principios reales utilizados en entornos profesionales.
+- Arquitectura de software escalable y mantenible
+- Separación clara de responsabilidades (frontend/backend/base de datos)
+- Buenas prácticas de desarrollo (SOLID, DRY, validaciones múltiples capas)
+- Autenticación y autorización por roles
+- Diseño de APIs RESTful
+- Gestión de estado en aplicaciones React
+- Operaciones CRUD completas con lógica de negocio real
 
-En particular, este proyecto busca:
+El objetivo es simular un proyecto profesional real que resuelve un problema concreto, yendo más allá de un CRUD básico.
 
-- Mejorar habilidades en diseño de sistemas backend y frontend
-- Aplicar buenas prácticas de arquitectura
-- Trabajar la separación de responsabilidades
-- Entender el flujo completo de datos entre cliente, servidor y base de datos
-- Preparar una base sólida para futuros proyectos más complejos
-
-Este proyecto tiene un enfoque **educativo y práctico**, no comercial.
-
----
-
-## Tecnologías utilizadas
+## 🚀 Tecnologías Utilizadas
 
 ### Backend
 
-- **Node.js**
-  - Entorno de ejecución para JavaScript del lado del servidor
-- **Express.js**
-  - Framework minimalista para crear APIs REST
-- **MongoDB**
-  - Base de datos NoSQL orientada a documentos
-- **Mongoose**
-  - ODM para modelar y gestionar datos en MongoDB
-
-**Por qué estas tecnologías:**
-
-- Permiten construir APIs escalables y mantenibles
-- Son ampliamente usadas en la industria
-- Facilitan el desarrollo rápido sin sacrificar estructura
-
----
+- **Node.js** - Entorno de ejecución de JavaScript del lado del servidor
+- **Express** - Framework web minimalista y flexible para Node.js
+  - _¿Por qué?_ Simplicidad, gran ecosistema, excelente para APIs RESTful
 
 ### Frontend
 
-- **React**
-  - Librería para construir interfaces de usuario basadas en componentes
-- **Vite**
-  - Herramienta de desarrollo rápida para proyectos frontend modernos
-- **CSS**
-  - Estilos personalizados sin dependencias innecesarias
+- **React** - Librería de JavaScript para construir interfaces de usuario
+  - _¿Por qué?_ Componentes reutilizables, virtual DOM, gran comunidad
 
-**Por qué estas tecnologías:**
+### Base de Datos
 
-- React es estándar en aplicaciones frontend modernas
-- Vite mejora la experiencia de desarrollo
-- Facilita la separación entre lógica y presentación
+- **MongoDB** - Base de datos NoSQL orientada a documentos
+  - _¿Por qué?_ Flexibilidad en esquemas, excelente rendimiento en lecturas, documentos JSON nativos
 
----
+### Herramientas Adicionales
 
-## Estructura del proyecto
+- **Mongoose** - ODM (Object Data Modeling) para MongoDB
+- **JWT (JSON Web Tokens)** - Autenticación stateless
+- **bcrypt** - Encriptación de contraseñas
+- **Yarn** - Gestor de paquetes
 
-```txt
-FULLSTACK-PROJECT
-├── backend
-│   ├── src
-│   ├── package.json
-│   └── README.md
-├── frontend
-│   ├── src
-│   ├── public
-│   ├── package.json
-│   └── README.md
-└── README.md
+## ✨ Funcionalidades Principales
+
+### Gestión de Productos
+
+- CRUD completo de productos
+- Control de stock en tiempo real
+- Categorización de productos
+- Alertas de stock mínimo
+- Búsqueda y filtrado avanzado
+
+### Gestión de Movimientos
+
+- Registro de entradas (compras/reabastecimiento)
+- Registro de salidas (ventas)
+- Ajustes de inventario
+- Historial completo de movimientos
+- Trazabilidad por usuario
+
+### Sistema de Usuarios
+
+- Autenticación con JWT
+- Roles: Administrador y Empleado
+- Control de acceso por permisos
+- Gestión de usuarios (solo admin)
+
+### Dashboard y Reportes
+
+- Métricas del inventario (valor total, cantidad de productos)
+- Productos con bajo stock
+- Productos más vendidos
+- Actividad reciente
+
+## 📁 Estructura del Proyecto
+
+```
+stockflow/
+├── backend/              # Servidor Node.js + Express
+│   ├── config/          # Configuraciones (DB, environment)
+│   ├── controllers/     # Controladores de rutas
+│   ├── middlewares/     # Middlewares (auth, validación, errores)
+│   ├── models/          # Modelos de Mongoose
+│   ├── routes/          # Definición de rutas
+│   ├── services/        # Lógica de negocio
+│   ├── utils/           # Utilidades
+│   ├── validators/      # Validadores de datos
+│   └── server.js        # Punto de entrada del servidor
+│
+├── frontend/            # Aplicación React
+│   ├── public/          # Archivos estáticos
+│   └── src/
+│       ├── components/  # Componentes reutilizables
+│       ├── context/     # Context API para estado global
+│       ├── hooks/       # Custom hooks
+│       ├── pages/       # Páginas/vistas principales
+│       ├── services/    # Servicios para comunicación con API
+│       ├── utils/       # Utilidades del frontend
+│       └── App.js       # Componente raíz
+│
+└── README.md            # Este archivo
 ```
 
-Cada parte del sistema se ejecuta de forma independiente, pero ambas trabajan juntas para formar una aplicación completa.
+## 🛠️ Instalación
 
----
+### Prerrequisitos
 
-## Enfoque de desarrollo
+- Node.js (v14 o superior)
+- MongoDB (v4.4 o superior)
+- Yarn
 
-El proyecto se desarrollará priorizando:
+### Pasos de Instalación
 
-- Arquitectura clara
-- Código legible y mantenible
-- Separación de capas
-- Buenas prácticas de desarrollo
-- Escalabilidad futura
+1. **Clonar el repositorio**
 
-Antes de escribir código, se trabaja el **diseño completo del sistema**, incluyendo:
+```bash
+git clone <url-del-repositorio>
+cd stockflow
+```
 
-- Definición del dominio
-- Arquitectura general
-- Flujo de datos
-- Responsabilidades de cada capa
+2. **Instalar dependencias**
 
----
+Puedes instalar las dependencias de todo el proyecto desde la raíz:
 
-## Estado del proyecto
+```bash
+yarn install
+```
 
-En fase de **diseño y planificación**.
-El desarrollo se realizará paso a paso, documentando decisiones y estructura antes de la implementación.`
+O instalar cada parte por separado:
+
+```bash
+# Backend
+cd backend
+yarn install
+
+# Frontend
+cd frontend
+yarn install
+```
+
+3. **Configurar variables de entorno**
+
+Crear archivo `.env` en la carpeta `backend/`:
+
+```env
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/stockflow
+JWT_SECRET=tu_clave_secreta_muy_segura
+NODE_ENV=development
+```
+
+4. **Iniciar MongoDB**
+
+Asegúrate de que MongoDB esté ejecutándose en tu sistema local.
+
+## 🚀 Ejecución del Proyecto
+
+### Opción 1: Iniciar Todo el Proyecto (Recomendado)
+
+Desde la raíz del proyecto:
+
+```bash
+yarn dev
+```
+
+Esto iniciará automáticamente el backend y el frontend en paralelo.
+
+### Opción 2: Iniciar Backend y Frontend por Separado
+
+**Backend** (en una terminal):
+
+```bash
+cd backend
+yarn dev
+```
+
+El servidor estará corriendo en `http://localhost:5000`
+
+**Frontend** (en otra terminal):
+
+```bash
+cd frontend
+yarn dev
+```
+
+La aplicación estará disponible en `http://localhost:3000`
+
+## 🔐 Usuarios de Prueba
+
+Una vez que ejecutes el proyecto, puedes usar estos usuarios de prueba (si se implementa seed de datos):
+
+**Administrador:**
+
+- Email: admin@stockflow.com
+- Password: admin123
+
+**Empleado:**
+
+- Email: empleado@stockflow.com
+- Password: empleado123
+
+## 📚 API Endpoints
+
+### Autenticación
+
+```
+POST   /api/auth/login          - Iniciar sesión
+POST   /api/auth/register       - Registrar usuario (admin)
+GET    /api/auth/me             - Obtener usuario actual
+```
+
+### Productos
+
+```
+GET    /api/products            - Listar productos
+GET    /api/products/:id        - Obtener producto por ID
+POST   /api/products            - Crear producto
+PUT    /api/products/:id        - Actualizar producto
+DELETE /api/products/:id        - Eliminar producto
+```
+
+### Movimientos
+
+```
+GET    /api/movements           - Listar movimientos
+POST   /api/movements           - Registrar movimiento
+GET    /api/movements/:id       - Obtener movimiento por ID
+```
+
+### Dashboard
+
+```
+GET    /api/dashboard/stats     - Estadísticas generales
+GET    /api/dashboard/alerts    - Alertas de stock bajo
+GET    /api/dashboard/top-products - Productos más vendidos
+```
+
+### Usuarios
+
+```
+GET    /api/users               - Listar usuarios (admin)
+PUT    /api/users/:id           - Actualizar usuario
+DELETE /api/users/:id           - Desactivar usuario
+```
+
+## 🏗️ Arquitectura
+
+El proyecto sigue una **arquitectura de 3 capas**:
+
+1. **Capa de Presentación (Frontend - React)**
+   - Interfaz de usuario
+   - Gestión de estado local y global
+   - Comunicación con API
+
+2. **Capa de Lógica de Negocio (Backend - Node.js/Express)**
+   - API RESTful
+   - Autenticación y autorización
+   - Validaciones
+   - Lógica de negocio (cálculos de stock, alertas)
+
+3. **Capa de Datos (MongoDB)**
+   - Persistencia de datos
+   - Colecciones: products, movements, users, categories
+
+## 🎨 Principios de Desarrollo Aplicados
+
+- **Separación de Responsabilidades**: Cada capa tiene un propósito específico
+- **SOLID**: Aplicado en servicios y controladores
+- **DRY**: Componentes y funciones reutilizables
+- **Validación Múltiple**: Frontend (UX) + Backend (seguridad) + Base de datos (integridad)
+- **Seguridad**: JWT, bcrypt, sanitización de datos, control de acceso por roles
+
+## 🔮 Posibles Mejoras Futuras
+
+- [ ] Implementación de tests (unitarios, integración, E2E)
+- [ ] Reportes en PDF
+- [ ] Notificaciones por email
+- [ ] Múltiples almacenes/sucursales
+- [ ] Gráficas avanzadas con Chart.js
+- [ ] Aplicación móvil usando la misma API
+- [ ] Sistema de órdenes de compra automatizadas
+- [ ] Integración con proveedores
+
+## 📝 Notas de Desarrollo
+
+Este proyecto está en desarrollo como ejercicio de aprendizaje. El código puede no estar optimizado para producción y se irá mejorando iterativamente.
+
+## 👨‍💻 Autor
+
+Desarrollado como proyecto de práctica profesional en desarrollo full stack.
+
+## 📄 Licencia
+
+Este proyecto es de código abierto y está disponible para fines educativos.
