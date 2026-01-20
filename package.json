@@ -1,0 +1,16 @@
+{
+    "name": "fullStack-project-express-react",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/Duran24062005/fullStack-project-express-react.git",
+    "author": "Alexi_Dg <alexisdurangomez588@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "dev": "concurrently \"yarn --cwd backend dev\" \"yarn --cwd frontend dev\"",
+        "start": "concurrently \"yarn --cwd backend start\" \"yarn --cwd frontend preview\"",
+        "install:all": "yarn --cwd backend && yarn --cwd frontend"
+    },
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
