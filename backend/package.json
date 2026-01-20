@@ -1,0 +1,21 @@
+{
+    "name": "backend-express",
+    "version": "1.0.0",
+    "description": "Full stack project in Node with Express and React. Simple CRUD.",
+    "main": "index.js",
+    "repository": "https://github.com/Duran24062005/fullStack-project-express-react",
+    "author": "Alexi Dg",
+    "license": "MIT",
+    "scripts": {
+        "dev": "nodemon src/index.js",
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "mongodb": "^7.0.0",
+        "nodemon": "^3.1.11"
+    },
+    "devDependencies": {
+        "dotenv": "^17.2.3"
+    }
+}
