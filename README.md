@@ -1,9 +1,3 @@
-Perfecto.
-Te dejo una **documentación básica para el README principal**, clara, profesional y sin adornos raros (copiar/pegar friendly).
-
----
-
-````md
 # Fullstack Project – Express + React + MongoDB
 
 ## Descripción
@@ -84,7 +78,6 @@ FULLSTACK-PROJECT
 │   └── README.md
 └── README.md
 ```
-````
 
 Cada parte del sistema se ejecuta de forma independiente, pero ambas trabajan juntas para formar una aplicación completa.
 
