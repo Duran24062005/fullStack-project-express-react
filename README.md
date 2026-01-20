@@ -103,18 +103,18 @@ stockflow/
 │
 ├── frontend/            # Aplicación React
 │   ├── public/          # Archivos estáticos
-│   └── src/
-│       ├── assets/      # Imágenes, iconos, recursos
-│       ├── components/  # Componentes reutilizables
-│       ├── context/     # Context API para estado global
-│       ├── hooks/       # Custom hooks
-│       ├── pages/       # Páginas/vistas principales
-│       ├── services/    # Servicios para comunicación con API
-│       ├── utils/       # Utilidades del frontend
-│       ├── app.css      # Estilos globales
-│       ├── app.tsx      # Componente raíz
-│       ├── index.css    # Estilos base
-│       └── main.tsx     # Punto de entrada
+│   ├── src/
+│   |   ├── assets/      # Imágenes, iconos, recursos
+│   |   ├── components/  # Componentes reutilizables
+│   |   ├── context/     # Context API para estado global
+│   |   ├── hooks/       # Custom hooks
+│   |   ├── pages/       # Páginas/vistas principales
+│   |   ├── services/    # Servicios para comunicación con API
+│   |   ├── utils/       # Utilidades del frontend
+│   |   ├── app.css      # Estilos globales
+│   |   ├── app.tsx      # Componente raíz
+│   |   ├── index.css    # Estilos base
+│   |   └── main.tsx     # Punto de entrada
 │   ├── index.html       # HTML principal
 │   ├── package.json     # Dependencias del frontend
 │   ├── README.md        # Documentación del frontend
@@ -123,11 +123,12 @@ stockflow/
 │   └── yarn.lock        # Lock file de Yarn
 │
 ├── docs/                # Documentación del proyecto
-│   └── helper/          # Documentos auxiliares
-│       ├── IA_prompts.md        # Prompts utilizados con IA
-│       ├── SystemProposal.md    # Propuesta inicial del sistema
-│       ├── Architecture.md      # Documentación de arquitectura
-│       └── SystemArtifacts.md   # Artefactos del sistema
+│   ├── helper/          # Documentos auxiliares
+│   |   ├── IA_prompts.md        # Prompts utilizados con IA
+│   |   ├── SystemProposal.md    # Propuesta inicial del sistema
+│   |   ├── Architecture.md      # Documentación de arquitectura
+│   |   └── SystemArtifacts.md   # Artefactos del sistema
+|   └── README.md        # Este archivo (documentación de los archivos dentro de esté folder)
 │
 ├── node_modules/        # Dependencias (generado automáticamente)
 ├── .gitignore           # Archivos ignorados por Git
@@ -149,8 +150,8 @@ stockflow/
 1. **Clonar el repositorio**
 
 ```bash
-git clone <url-del-repositorio>
-cd stockflow
+git clone https://github.com/Duran24062005/fullStack-project-express-react
+cd fullStack-project-express-react
 ```
 
 2. **Instalar dependencias**
