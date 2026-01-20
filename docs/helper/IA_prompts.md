@@ -1,5 +1,9 @@
+## My request
+
 Ok, ahora necesito que generes un prompt para pedirle a cloud que me ayude a diseñar esté proyecto, la idea es practicar mis conocimientos y habilidades en desarrollo de software, en este caso desarrollando un sistema que como minimo sea un crud, el problema es que no se que hacer exacteamente, así que pidele que genere una propuesta de proyecto, y que no genere codigo hasta que yo se lopida, que trabajemos en el systemartifact para el diseño completo, tanto backend como frontend.
 Como sabes las técnologias son de node, express y react, y mongodb como base de datos.
+
+## IA response
 
 ```
 Quiero que actúes como un Software Architect y Technical Mentor.
