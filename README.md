@@ -179,7 +179,7 @@ yarn install
 Crear archivo `.env` en la carpeta `backend/`:
 
 ```env
-PORT=5000
+PORT=8000
 MONGODB_URI=mongodb://localhost:27017/stockflow
 JWT_SECRET=tu_clave_secreta_muy_segura
 NODE_ENV=development

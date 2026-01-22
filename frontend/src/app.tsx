@@ -1,10 +1,39 @@
-import { useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
+import getHealty from './api/getHealty'
 
 export function App() {
   const [count, setCount] = useState(0)
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setTimeout(async()=>{
+        try {
+          const response = await getHealty()
+          setData(response)
+        } catch (error) {
+          console.error(error)
+        } finally {
+          setLoading(false)
+        }
+
+      }, 3000)
+    }
+
+    fetchData()
+  }, [])
+
+  console.log(data[0]["status"]);
+  console.log(loading);
+  
+  if (loading) {
+    return <span class="loader"></span>
+  }
+  
 
   return (
     <>

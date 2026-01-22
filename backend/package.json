@@ -3,19 +3,28 @@
     "version": "1.0.0",
     "description": "Full stack project in Node with Express and React. Simple CRUD.",
     "main": "index.js",
+    "type": "module",
     "repository": "https://github.com/Duran24062005/fullStack-project-express-react",
     "author": "Alexi Dg",
     "license": "MIT",
-    "scripts": {
+    "scripts": 
+    {
         "dev": "nodemon src/index.js",
         "start": "node src/index.js"
     },
-    "dependencies": {
+    "dependencies": 
+    {
+        "cors": "^2.8.5",
         "express": "^5.2.1",
         "mongodb": "^7.0.0",
-        "nodemon": "^3.1.11"
+        "nodemon": "^3.1.11",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^5.0.1"
     },
-    "devDependencies": {
+    "devDependencies": 
+    {
+        "@types/swagger-jsdoc": "^6.0.4",
+        "@types/swagger-ui-express": "^4.1.8",
         "dotenv": "^17.2.3"
     }
 }

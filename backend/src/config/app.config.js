@@ -1,10 +1,10 @@
-import dotenv from dotenv
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
 export const app_config = {
     app: {
-        port: process.env.PORT || 4000,
+        port: process.env.PORT || 3000,
     },
     mongo: {
         clouster: process.env.MONGO_CLOUSTER_URL || null,
